@@ -9,7 +9,7 @@ const TermOfUSe = sequelize.define(
       allowNull: false,
     },
     details: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(100000),
       allowNull: false,
     },
     active: {

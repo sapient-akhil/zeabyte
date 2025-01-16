@@ -16,6 +16,7 @@ const termOfUseController = require("../controllers/admin/termOfUseController");
 const faqsController = require("../controllers/admin/faqsController");
 const contactUsController = require("../controllers/admin/contactUsController");
 const aboutUsController = require("../controllers/admin/aboutUsController");
+const customerController = require("../controllers/admin/customerController");
 const router = express.Router();
 
 // ----------------- admin - auth module  --------------------------
@@ -171,5 +172,8 @@ router.patch(
   adminAuthentication,
   aboutUsController.editAboutUs
 );
+
+//-------------------------------- get customer data from Accredo and in db -------------------------//
+router.get("/customer", adminAuthentication, customerController.addCustomer);
 
 module.exports = router;

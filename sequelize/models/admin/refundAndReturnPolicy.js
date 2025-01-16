@@ -9,7 +9,7 @@ const RefundAndReturnPolicy = sequelize.define(
       allowNull: false,
     },
     details: {
-      type: DataTypes.STRING(10000),
+      type: DataTypes.STRING(100000),
       allowNull: false,
     },
     active: {

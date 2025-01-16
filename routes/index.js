@@ -1,6 +1,7 @@
 const admin = require("./admin.routes");
 const user = require("./user.routes");
 const common = require("./common.routes");
+const webhook = require("./webhook.routes");
 
 module.exports = {
   // zeitcard routes
@@ -12,5 +13,8 @@ module.exports = {
   },
   zeitCardCommonRoutes: (app) => {
     app.use("/common", common);
+  },
+  zeitCardWebhookRoutes: (app) => {
+    app.use("/webhook", webhook);
   },
 };
